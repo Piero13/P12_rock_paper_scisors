@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pierre - Papier - Ciseaux</title>
+
+    <link rel="stylesheet" href="./sass/main.css">
+</head>
+
+<body>
+    <header id="header" class="header">
+        <h1 class="header__tile">PIERRE - PAPIER - CISEAUX</h1>
+    </header>
+
+    <main id="main">
+        <section class="userChoice">
+            <div onclick="play(0)">
+                <img src="./assets/rock.png" alt="dessin d'une main imitant pierre">
+            </div>
+
+            <div onclick="play(1)">
+                <img src="./assets/paper.png" alt="dessin d'une main imitant une feuille de papier">
+            </div>
+
+            <div onclick="play(2)">
+                <img src="./assets/scisors.png" alt="dessin d'une main imitant une paire de ciseaux">
+            </div>
+        </section>
+
+        <section class="game">
+            <div class="game__player">
+                <h3>Vous</h3>
+                <div id="game__user" class="game__user">
+                    <img id="gameUser" src="" alt="">
+                </div>
+            </div>
+
+            <div class="game__result">
+                <p id="result">Résultat</p>
+            </div>
+
+            <div class="game__player">
+                <h3>Ordinateur</h3>
+                <div id="game__computer" class="game__computer">
+                    <img id="gameComputer" src="" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./index.js" defer></script>
+</body>
+
+</html>

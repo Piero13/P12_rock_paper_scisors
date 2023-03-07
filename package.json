@@ -1,0 +1,11 @@
+{
+  "name": "p12_rock_paper_scisors",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/styles.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
