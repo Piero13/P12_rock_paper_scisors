@@ -27,10 +27,10 @@ let result = document.getElementById("result");
 
 function play(playedChoice) {
     let userChoice = choices[playedChoice];
-    gameUserCard.style.backgroundColor = "initial";
-    gameComputerCard.style.backgroundColor = "initial";
-    gameUserCard.style.boxShadow = "initial";
-    gameComputerCard.style.boxShadow = "initial";
+    gameUserCard.style.backgroundColor = "none";
+    gameComputerCard.style.backgroundColor = "none";
+    gameUserCard.style.boxShadow = "none";
+    gameComputerCard.style.boxShadow = "none";
     gameUser.setAttribute("src", userChoice.src);
     gameUser.setAttribute("alt", userChoice.alt);
 
