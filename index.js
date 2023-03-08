@@ -27,8 +27,6 @@ let result = document.getElementById("result");
 
 function play(playedChoice) {
     let userChoice = choices[playedChoice];
-    gameUserCard.style.backgroundColor = "none";
-    gameComputerCard.style.backgroundColor = "none";
     gameUserCard.style.boxShadow = "none";
     gameComputerCard.style.boxShadow = "none";
     gameUser.setAttribute("src", userChoice.src);
@@ -60,15 +58,11 @@ function play(playedChoice) {
             (userChoice.name == "scisors" && computerChoice.name == "paper")
             ) {
             result.innerHTML = "Gagné !";
-            gameUserCard.style.backgroundColor = "green";
             gameUserCard.style.boxShadow = "5px 5px 8px rgb(0, 255, 0, 0.5), -5px -5px 8px rgb(0, 255, 0, 0.5), -5px 5px 8px rgb(0, 255, 0, 0.5), 5px -5px 8px rgb(0, 255, 0, 0.5)";
-            gameComputerCard.style.backgroundColor = "red";
             gameComputerCard.style.boxShadow = "5px 5px 8px rgb(255, 0, 0, 0.5), -5px -5px 8px rgb(255, 0, 0, 0.5), -5px 5px 8px rgb(255, 0, 0, 0.5), 5px -5px 8px rgb(255, 0, 0, 0.5)";
         } else {
             result.innerHTML = "Perdu !";
-            gameUserCard.style.backgroundColor = "red";
             gameUserCard.style.boxShadow = "5px 5px 8px rgb(255, 0, 0, 0.5), -5px -5px 8px rgb(255, 0, 0, 0.5), -5px 5px 8px rgb(255, 0, 0, 0.5), 5px -5px 8px rgb(255, 0, 0, 0.5)";
-            gameComputerCard.style.backgroundColor = "green";
             gameComputerCard.style.boxShadow = "5px 5px 8px rgb(0, 255, 0, 0.5), -5px -5px 8px rgb(0, 255, 0, 0.5), -5px 5px 8px rgb(0, 255, 0, 0.5), 5px -5px 8px rgb(0, 255, 0, 0.5)";
         }
 
