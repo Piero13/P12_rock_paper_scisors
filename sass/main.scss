@@ -1,5 +1,7 @@
+//variables & mixins
 $primary: rgb(177, 69, 69);
-$d: rgb(255, 0, 0);
+$secondary: rgb(199, 4, 4);
+$tertiary: rgb(44, 0, 0);
 
 @mixin card {
     display: flex;
@@ -7,25 +9,38 @@ $d: rgb(255, 0, 0);
     justify-content: center;
     margin: 0 30px;
     padding: 10px;
-    width: 100px;
-    height: 100px;
-    border: 2px solid black;
+    border: 2px solid $primary;
     border-radius: 10px;
 }
 
+@mixin bg-gradient--red {
+    background: linear-gradient(to top left, $secondary, $tertiary, $secondary)
+}
+
+//general styles
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+h1 {
+    font-size: 24px;
+}
+
+.card {
+    @include card();
+    width: 100px;
+    height: 100px;
+}
+
 //header
 .header {
+    @include bg-gradient--red();
     display: flex;
     justify-content: center;
     padding: 20px;
     margin-bottom: 80px;
-    background-color: $primary;
     color: #fff;
 }
 
@@ -34,9 +49,8 @@ $d: rgb(255, 0, 0);
     display: flex;
     justify-content: center;
 
-    & div {
-        @include card;
-        box-shadow: 3px 3px 5px black;
+    & .card {
+        box-shadow: 3px 3px 5px $tertiary;
         transition: all 500ms;
 
         &:hover {
@@ -67,10 +81,6 @@ $d: rgb(255, 0, 0);
         align-items: center
     }
 
-    &__user, &__computer {
-        @include card;
-    }
-
     &__result {
         @include card;
         margin-top: 25px;
@@ -80,4 +90,19 @@ $d: rgb(255, 0, 0);
 
 #gameUser, #gameComputer {
     height: 100%;
+}
+
+//footer
+
+
+//Media queries
+@media screen and (max-width: 798px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .card {
+        width: 80px;
+        height: 80px;
+    }
 }

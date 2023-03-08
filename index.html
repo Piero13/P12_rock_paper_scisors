@@ -17,23 +17,23 @@
 
     <main id="main">
         <section class="userChoice">
-            <div onclick="play(0)">
-                <img src="./assets/rock.png" alt="dessin d'une main imitant pierre">
+            <div class="card" onclick="play(0)">
+                <img src="./assets/rock.png" alt="dessin d'une main imitant pierre" title="Pierre">
             </div>
 
-            <div onclick="play(1)">
-                <img src="./assets/paper.png" alt="dessin d'une main imitant une feuille de papier">
+            <div class="card" onclick="play(1)">
+                <img src="./assets/paper.png" alt="dessin d'une main imitant une feuille de papier" title="Papier">
             </div>
 
-            <div onclick="play(2)">
-                <img src="./assets/scisors.png" alt="dessin d'une main imitant une paire de ciseaux">
+            <div class="card" onclick="play(2)">
+                <img src="./assets/scisors.png" alt="dessin d'une main imitant une paire de ciseaux" title="Ciseaux">
             </div>
         </section>
 
         <section class="game">
             <div class="game__player">
                 <h3>Vous</h3>
-                <div id="game__user" class="game__user">
+                <div id="game__user" class="card">
                     <img id="gameUser" src="" alt="">
                 </div>
             </div>
@@ -44,7 +44,7 @@
 
             <div class="game__player">
                 <h3>Ordinateur</h3>
-                <div id="game__computer" class="game__computer">
+                <div id="game__computer" class="card">
                     <img id="gameComputer" src="" alt="">
                 </div>
             </div>
