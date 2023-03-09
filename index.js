@@ -51,17 +51,17 @@ function play(playedChoice) {
         gameComputer.setAttribute("alt", computerChoice.alt);
 
         if (userChoice.name == computerChoice.name) {
-            result.innerHTML = "Egalité !";
+            result.innerHTML = "Egalité";
         } else if (
             (userChoice.name == "rock" && computerChoice.name == "scisors") ||
             (userChoice.name == "paper" && computerChoice.name == "rock") || 
             (userChoice.name == "scisors" && computerChoice.name == "paper")
             ) {
-            result.innerHTML = "Gagné !";
+            result.innerHTML = "Gagné";
             gameUserCard.style.boxShadow = "5px 5px 8px rgb(0, 255, 0, 0.5), -5px -5px 8px rgb(0, 255, 0, 0.5), -5px 5px 8px rgb(0, 255, 0, 0.5), 5px -5px 8px rgb(0, 255, 0, 0.5)";
             gameComputerCard.style.boxShadow = "5px 5px 8px rgb(255, 0, 0, 0.5), -5px -5px 8px rgb(255, 0, 0, 0.5), -5px 5px 8px rgb(255, 0, 0, 0.5), 5px -5px 8px rgb(255, 0, 0, 0.5)";
         } else {
-            result.innerHTML = "Perdu !";
+            result.innerHTML = "Perdu";
             gameUserCard.style.boxShadow = "5px 5px 8px rgb(255, 0, 0, 0.5), -5px -5px 8px rgb(255, 0, 0, 0.5), -5px 5px 8px rgb(255, 0, 0, 0.5), 5px -5px 8px rgb(255, 0, 0, 0.5)";
             gameComputerCard.style.boxShadow = "5px 5px 8px rgb(0, 255, 0, 0.5), -5px -5px 8px rgb(0, 255, 0, 0.5), -5px 5px 8px rgb(0, 255, 0, 0.5), 5px -5px 8px rgb(0, 255, 0, 0.5)";
         }
