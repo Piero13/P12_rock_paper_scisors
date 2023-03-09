@@ -49,8 +49,8 @@ h1 {
     color: #fff;
 
     &__logo {
-        height: 40px;
-        margin-right: 10px;
+        height: 50px;
+        margin-right: 20px;
     }
 }
 
@@ -119,6 +119,13 @@ h1 {
 @media screen and (max-width: 798px) {
     h1 {
         font-size: 20px;
+    }
+
+    .header {
+        &__logo {
+            height: 30px;
+            margin-right: 10px;
+        }
     }
 
     .card {
