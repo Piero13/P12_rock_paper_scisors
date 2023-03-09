@@ -24,6 +24,10 @@ $tertiary: rgb(44, 0, 0);
     box-sizing: border-box;
 }
 
+body {
+    height: 100vh;
+}
+
 h1 {
     font-size: 24px;
 }
@@ -39,9 +43,15 @@ h1 {
     @include bg-gradient--red();
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 20px;
     margin-bottom: 80px;
     color: #fff;
+
+    &__logo {
+        height: 40px;
+        margin-right: 10px;
+    }
 }
 
 //section userChoice
@@ -72,7 +82,7 @@ h1 {
     margin: 100px 0;
 
     & h3 {
-        margin-bottom: 3px;
+        margin-bottom: 8px;
     }
 
     &__player {
@@ -83,6 +93,7 @@ h1 {
 
     &__result {
         @include card;
+        width: 100px;
         margin-top: 25px;
         border: none;
     }
@@ -93,7 +104,16 @@ h1 {
 }
 
 //footer
-
+.footer {
+    @include bg-gradient--red();
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    color: #fff;
+}
 
 //Media queries
 @media screen and (max-width: 798px) {

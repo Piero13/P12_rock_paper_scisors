@@ -17,7 +17,7 @@ const choices = [
 ]
 
 rep = 0;
-itr = 25;
+itr = 35;
 let computerChoice;
 let gameUser = document.getElementById("gameUser");
 let gameUserCard = document.getElementById("game__user");
@@ -33,11 +33,11 @@ function play(playedChoice) {
     gameUser.setAttribute("alt", userChoice.alt);
 
     if(playedChoice == 0) {
-        t = setTimeout("play(0)", 150);
+        t = setTimeout("play(0)", 100);
     } else if(playedChoice == 1) {
-        t = setTimeout("play(1)", 150);
+        t = setTimeout("play(1)", 100);
     } else {
-        t = setTimeout("play(2)", 150);
+        t = setTimeout("play(2)", 100);
     }
     
     rep += 1;
